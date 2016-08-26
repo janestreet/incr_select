@@ -1,0 +1,8 @@
+(library
+ ((name incr_select)
+  (public_name incr_select)
+  (wrapped false)
+  (preprocess (((pps (ppx_js_driver JANE_KERNEL)) All)))
+  (js_of_ocaml ())
+  (libraries (core_kernel incremental_kernel))))
+
