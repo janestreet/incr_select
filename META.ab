@@ -1,8 +1,0 @@
-version = "$(pkg_version)"
-description = "Handling of large set of incremental outputs from a single input"
-requires = "bin_prot core_kernel fieldslib incremental_kernel ppx_assert.runtime-lib ppx_bench.runtime-lib ppx_hash.runtime-lib ppx_inline_test.runtime-lib sexplib typerep variantslib"
-archive(byte  ) = "incr_select.cma"
-archive(native) = "incr_select.cmxa"
-plugin(byte  ) = "incr_select.cma"
-plugin(native) = "incr_select.cmxs"
-exists_if = "incr_select.cma"
