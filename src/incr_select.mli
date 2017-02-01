@@ -1,4 +1,4 @@
-open Core_kernel.Std
+open Core_kernel
 
 (** This module provides the ability to create a large set of incremental outputs based on
     a single incremental input, where some subset of the outputs are selected to have

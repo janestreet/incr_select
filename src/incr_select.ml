@@ -1,4 +1,4 @@
-open Core_kernel.Std
+open Core_kernel
 
 module Make (Incr : Incremental_kernel.Incremental_intf.S) = struct
   module E = Incr.Expert
