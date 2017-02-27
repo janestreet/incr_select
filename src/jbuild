@@ -5,3 +5,5 @@
   (js_of_ocaml ())
   (libraries (core_kernel incremental_kernel))))
 
+
+(jbuild_version jane_street)
