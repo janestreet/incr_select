@@ -2,7 +2,6 @@
  ((name incr_select)
   (public_name incr_select)
   (preprocess (pps (js_of_ocaml.ppx.driver ppx_jane)))
-  (js_of_ocaml ())
   (libraries (core_kernel incremental_kernel))))
 
 
