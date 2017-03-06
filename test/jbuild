@@ -7,7 +7,7 @@
     expect_test_helpers_kernel
     incremental_kernel_debug
     ))
-  (preprocess (pps (ppx_jane)))
+  (preprocess (pps (ppx_jane ppx_driver.runner)))
 ))
 
 
