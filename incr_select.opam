@@ -6,7 +6,7 @@ bug-reports: "https://github.com/janestreet/incr_select/issues"
 dev-repo: "git+https://github.com/janestreet/incr_select.git"
 license: "Apache-2.0"
 build: [
-  ["jbuilder" "build" "--only-packages" "incr_select" "--root" "." "-j" jobs "@install"]
+  ["jbuilder" "build" "-p" name "-j" jobs]
 ]
 depends: [
   "core_kernel"
