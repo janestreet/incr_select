@@ -25,7 +25,7 @@ module Make (Incr : Incremental_kernel.Incremental_intf.S) = struct
         ~(make_input_node : make_key_stale:('a -> unit) -> unit Incr.t)
     : ('a -> 'b Incr.t) Staged.t
     =
-    let necessary_dependencies = Hashtbl.create ~size:hashtbl_size ~hashable () in
+    let necessary_dependencies = Hashtbl.Using_hashable.create ~size:hashtbl_size ~hashable () in
     let (input_node : unit Incr.t) =
       let make_key_stale key =
         Hashtbl.find necessary_dependencies key
@@ -116,7 +116,7 @@ module Make (Incr : Incremental_kernel.Incremental_intf.S) = struct
         input
     =
     let hashable = H.hashable in
-    let selected = Hashtbl.create ~size:hashtbl_size ~hashable () in
+    let selected = Hashtbl.Using_hashable.create ~size:hashtbl_size ~hashable () in
     let compute_output key =
       Hashtbl.find selected key |> Option.value ~default
     in
@@ -137,7 +137,7 @@ module Make (Incr : Incremental_kernel.Incremental_intf.S) = struct
         input
     =
     let hashable = H.hashable in
-    let selected = Hash_set.create ~size:hashtbl_size ~hashable () in
+    let selected = Hash_set.Using_hashable.create ~size:hashtbl_size ~hashable () in
     let compute_output key = Hash_set.mem selected key in
     let make_input_node ~make_key_stale =
       Incr.map input ~f:(fun inp ->
