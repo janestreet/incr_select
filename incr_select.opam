@@ -13,7 +13,6 @@ depends: [
   "incremental_kernel"
   "ppx_jane"
   "jbuilder"                {build & >= "1.0+beta18.1"}
-  "js_of_ocaml-ppx"
   "ocaml-migrate-parsetree" {>= "1.0"}
   "ppxlib"                  {>= "0.1.0"}
 ]
