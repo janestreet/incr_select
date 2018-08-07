@@ -1,6 +1,6 @@
 include Expect_test_helpers_kernel
 module Incr = struct
-  module Incr = Incremental_kernel_debug.Incremental.Make ()
+  module Incr = Incremental_kernel_debug.Make ()
   include Incr
   module Select = Incr_select.Make (Incr)
 end

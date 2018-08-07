@@ -15,7 +15,7 @@ open Core_kernel
     single value to determine where the focus is, and many individual incrementals for
     determining whether a given sub-component is in focus.
 *)
-module Make (Incr : Incremental_kernel.Incremental_intf.S) : sig
+module Make (Incr : Incremental_kernel.S) : sig
 
   (** [select_one] logically constructs a set of outputs such that exactly one is selected
       as [true] (specifically the one that corresponds to the current value of the input),
