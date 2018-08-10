@@ -2,6 +2,6 @@
  ((name incr_select)
   (public_name incr_select)
   (preprocess (pps (ppx_jane ppxlib.runner)))
-  (libraries (core_kernel incremental_kernel))))
+  (libraries (core_kernel incremental))))
 
 (jbuild_version 1)

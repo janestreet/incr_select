@@ -2,10 +2,10 @@
  ((name incr_select_test)
   (libraries (
     core_kernel
-    incremental_kernel
+    incremental
     incr_select
     expect_test_helpers_kernel
-    incremental_kernel_debug
+    incremental_debug
     ))
   (preprocess (pps (ppx_jane ppxlib.runner)))
 ))

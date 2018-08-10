@@ -1,6 +1,6 @@
 open Core_kernel
 
-module Make (Incr : Incremental_kernel.S) = struct
+module Make (Incr : Incremental.S) = struct
   module E = Incr.Expert
 
   (* Hashtbl starts out at a ridiculous size of 128. This is a more reasonable number
