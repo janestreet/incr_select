@@ -80,5 +80,5 @@ module type Incr_select = sig
       determining whether a given sub-component is in focus.
   *)
 
-  module Make (Incr : Incremental.S) : S with module Incr := Incr
+  module Make (Incr : Incremental.S_gen) : S with module Incr := Incr
 end
