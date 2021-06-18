@@ -1,2 +1,2 @@
 (library (name incr_select) (public_name incr_select)
- (libraries core_kernel incremental) (preprocess (pps ppx_jane)))
+ (libraries core_kernel.core incremental) (preprocess (pps ppx_jane)))
