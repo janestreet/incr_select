@@ -11,7 +11,7 @@ build: [
 ]
 depends: [
   "ocaml" {>= "4.08.0"}
-  "core_kernel"
+  "core"
   "incremental"
   "ppx_jane"
   "dune"        {>= "2.0.0"}
