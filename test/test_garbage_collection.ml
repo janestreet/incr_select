@@ -8,7 +8,7 @@ let%expect_test "unused nodes are collected" [@tags "no-js"] =
   let gen_incr = Staged.unstage (S.select_one (module Int) (Incr.Var.watch var)) in
 
   let incr0 = gen_incr 0 in
-  Caml.Gc.finalise (fun _ -> printf "incr0 collected") incr0;
+  Stdlib.Gc.finalise (fun _ -> printf "incr0 collected") incr0;
   let incr1 = gen_incr 1 in
 
   let o0 = Incr.observe incr0 in
