@@ -25,7 +25,7 @@ let%expect_test ("unused nodes are collected" [@tags "no-js"]) =
     let incr0 = gen_incr 0 in
     let o0' = Incr.observe incr0 in
     o0, o0', o1
-    [@@inline never]
+      [@@inline never]
   in
   let o0, o0', o1 = return_observers () in
   let (_ : bool Incr.Observer.t) = Sys.opaque_identity o0 in

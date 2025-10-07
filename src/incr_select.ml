@@ -18,7 +18,7 @@ module Make (Incr : Incremental.S_gen) = struct
 
       [make_input_node] makes sure that when the mutable state inside [compute_output] is
       updated, the corresponding nodes in the [necessary_dependencies] table are made
-      stale.  *)
+      stale. *)
   let setup_generator
     (hashable : 'a Hashtbl_intf.Hashable.t)
     ~(compute_output : 'a -> 'b)
@@ -64,10 +64,9 @@ module Make (Incr : Incremental.S_gen) = struct
       E.Node.watch output_node)
   ;;
 
-  (** This creates a unit incremental that fires whenever the input incremental
-      fires. When that occurs, it updates [selected] to match the current value of
-      [input], and calls [make_key_stale] for both the old and new value of the
-      incremental. *)
+  (** This creates a unit incremental that fires whenever the input incremental fires.
+      When that occurs, it updates [selected] to match the current value of [input], and
+      calls [make_key_stale] for both the old and new value of the incremental. *)
   let update_one ~input ~selected ~make_stale =
     Incr.map input ~f:(fun inp ->
       Option.iter inp ~f:make_stale;

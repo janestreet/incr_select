@@ -14,7 +14,7 @@ depends: [
   "core"
   "incremental"
   "ppx_jane"
-  "dune"        {>= "3.11.0"}
+  "dune"        {>= "3.17.0"}
 ]
 available: arch != "arm32" & arch != "x86_32"
 synopsis: "Handling of large set of incremental outputs from a single input"
