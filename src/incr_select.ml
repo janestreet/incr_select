@@ -3,8 +3,8 @@ open Core
 module Make (Incr : Incremental.S_gen) = struct
   module E = Incr.Expert
 
-  (* Hashtbl starts out at a ridiculous size of 128. This is a more reasonable number
-     of bins to have. *)
+  (* Hashtbl starts out at a ridiculous size of 128. This is a more reasonable number of
+     bins to have. *)
   let hashtbl_size = 10
 
   (** [setup_generator] sets up the staged conversion.
