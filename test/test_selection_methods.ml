@@ -8,8 +8,7 @@ let setup_test ~f ~list_size ~init run =
   let gen_incr = Staged.unstage (run value) in
   let gen_incr key =
     let incr = gen_incr key in
-    (* Make sure we are getting all of the changes from the underlying
-       incremental *)
+    (* Make sure we are getting all of the changes from the underlying incremental *)
     Incr.set_cutoff incr Incr.Cutoff.never;
     incr
   in
