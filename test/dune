@@ -1,5 +1,5 @@
 (library
  (name incr_select_test)
- (libraries core incr_select expect_test_helpers_core incremental_debug)
+ (libraries core incr_select expect_test_helpers_core incremental.debug)
  (preprocess
-  (pps ppx_jane)))
+  (pps ppx_jane -compare-require-explicit-locality)))
